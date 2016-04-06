@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Oh, The Weather Outside is Music</title>
+	<link rel="stylesheet" href="styles/style.css">
+
+	<!-- Google Fonts Valera Round -->
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<!-- font-family: 'Nunito', sans-serif; -->
+	<link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+	<!-- font-family: 'Open Sans', sans-serif; -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+ 
+<body>
+<div class="mainWrapper">
+
+			<header>
+				<h1 class="page_title">The Weather Outside is Music</h1>
+			</header>
+	<main class="functioning">
+	  <aside class="weatherConditions">
+		
+		  <div class= "weatherContainer">
+					<h3 class="subTitle">Get Sweet Music Ideas Based on the Weather</h3>
+					<h3 class="description">(type in the name of a town in Canada on the line below)</h3>
+			  	<h2 class="weather_string"></h2>
+			  	<h1 class="temp_c_string"></h1>
+			  	<h3 class="date_time"></h3>
+				<div class="container">
+			    <form action="">
+			      <input class="city" id="city" type="text">
+			      <input class="cityButton" id="cityButton" type="submit">
+			    </form>
+			  </div>
+		  </div>
+	  </aside>
+
+	  <aside class="music_data ">
+	  	<div class="music_data_Container clearfix">
+	  		<div class="music_head">
+		  		<h3 class="weather_sentence"></h3>
+	  		</div>
+	  		<div class="genreContainer">
+	  			<div class="genreBox">
+			  		<h2 class="genre_name"></h2>
+	  			</div>
+	  		</div>
+		  		<div class="artistInfoContainer">
+			  		<h2 class="artist_name"></h2>
+			  		<div class="songs_container">	
+			  		</div>
+		  		</div>
+		  </div>
+	  </aside>
+		  	<!-- <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf" width="400" height="80" frameborder="0" allowtransparency="true"></iframe> -->
+	</main>
+</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</html>

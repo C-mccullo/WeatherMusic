@@ -1,0 +1,251 @@
+// SCSS FOR WEATHERMUSIC
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+// Variable Color 
+$dark: #2A2A29;
+$orange: #FF983A;
+$yellow: #FFCD55;
+$light: #FCFBFB;
+// Variable Fonts
+$titleFont: 'Nunito', sans-serif, bold;
+$Quattro: 'Open Sans', sans-serif;
+
+html {
+	font-size: 62.5%;
+}
+body {
+	margin: 0 auto;
+	background-image: url('../images/clear_palmTrees.jpg');
+	background-size: cover;
+	background-position: 0%, 50%;
+}
+.mainWrapper {
+	margin: 0 auto;
+	height: 100vh;
+}
+
+h1, h2, h3, h4, h5, p {
+	margin: 0;
+}
+
+h1 {
+	font-size: 45px;
+	font-size: 4.5rem;
+	color: $orange;
+	padding: 30px 0px;
+}
+
+h2 {
+	font-size: 28px;
+	font-size: 2.8rem;
+	font-family: $titleFont;
+	color: $light;
+}
+
+h3 {
+font-size: 18px;
+font-size: 1.8rem;
+color: $light;
+font-family: $Quattro;
+}
+
+p {
+	font-size: 16px;
+	font-size: 1.6rem;
+	color: $orange;
+	padding: 10px 0;
+}
+ul {
+	text-decoration: none;
+	padding-left: 0px;
+}
+li {
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-family: $Quattro;
+	padding: 3px 0;
+	color: $light;
+	max-width: 100%;
+}
+input {
+	text-align: left;
+	display: block;
+	width:100%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	outline: none;
+	border: none;
+}
+
+input.city {
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid $dark;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	font-family: $Quattro;
+	color: $light;
+	font-weight: 700;
+}
+input.cityButton {
+	width: 100%;
+	border-radius: 20px;
+	text-align: center;
+	padding: 10px 0px;
+	background-color: $orange;
+	color: white;
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-family: $Quattro;
+	color: $light;
+	max-width: 160px;
+}
+
+.show {
+	display: block;
+}
+
+header {
+	text-align: center;
+	h1 {
+		width: 100%;
+		font-family: $titleFont;
+		color: $orange;
+		h3.subTitle, h3.description {
+			color: $dark;
+		}
+	}
+}
+
+.show {
+	display: block;
+}
+
+main.functioning {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0px 3%;
+}
+
+
+
+aside.weatherConditions {
+	padding: 30px;
+	flex-grow: 1; 
+	flex-shrink: 1;
+	width: 100%;
+	font-family: $titleFont;
+	.weatherContainer {
+		max-width: 600px;
+		background-color: transparentize($dark, 0.5); 
+		width: 70%;
+		text-align: left;
+		position: relative;
+		left: 50%;
+		padding: 20px;
+		transform: translate(-50%);
+		.weather_string {
+			display: block;
+			width: 100%;
+			color: $light;
+		}
+		.temp_c_string {
+			display: block;
+			width: 100%;
+			color: $light;
+		}
+	}
+	.weatherLocation {
+		width: 60%;
+		text-align:left;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+	}
+	.Formcontainer {
+		padding: 20px;
+		margin: 0 auto;
+	}
+}
+
+.music_data {
+	display: none;
+	background-color: $dark;
+	width: 0%;
+	max-height: 400px;
+	flex-shrink: 1;
+	flex-grow: 1;
+	text-align: left;
+	padding: 30px;
+	background: transparent;
+	.music_data_Container{
+		background-color: transparentize($dark, 0.5);
+		.music_head {
+			background-color: transparentize($dark, 0.1);
+			padding: 20px;
+			width: 100%;
+			float: left;
+		}
+		.genreContainer {
+			padding: 0px 20px;
+			float: left;
+			width: 50%;
+			height: 288px;
+			background-color: transparentize($dark, 0.5);
+			.genreBox {
+				position: relative;
+				text-align: center;
+				width: 210px;
+				height: 210px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				filter: grayscale(70%);
+				background-size: cover;
+				h2 {
+					position: relative;
+					top: 50%;
+				}
+			}
+		}
+		.artistInfoContainer {
+			float: right;
+			width: 50%;
+			background-color: transparentize($dark, 0.2);
+			padding: 20px;
+			h2 {
+				font-family: $Quattro;
+			}
+			.songs_container {
+				padding: 20px;
+				max-height: 210px;
+				overflow-y: scroll;
+				overflow-x: hidden;
+				&::-webkit-scrollbar {
+					width: 10px;
+				}
+				&::-webkit-scrollbar-track {
+					box-shadow: inset 0 0 6px transparentize($dark, 0.1);
+					border-radius: 20px;
+				}
+				&::-webkit-scrollbar-thumb {
+					background-color: black;
+					border-radius: 20px;
+					outline: none;
+				}
+				&::-webkit-scrollbar-corner {
+					display: none;
+				}
+			}
+		}
+	}
+}
